@@ -1,0 +1,12 @@
+job = "Software Development at Amazon"
+print(job[0])
+print(job[7])
+print(job[:7])
+print(job[:8])
+print(job[8:])
+print(job[9:])
+print(job[9:20])
+print(job[21:])
+print(job[:-1])
+print(job[::-1])
+print(job[:])
