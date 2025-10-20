@@ -6,9 +6,7 @@ contatos = {
     "luna@python.dev": {"nome": "luna", "idade": 27}
 } 
 
-#contatos.clear() #--> limpa todos os valores do dicionário
-
-contatos.copy() #--> cria um outro dicionário independente
+novo_dicionario = contatos.copy() #--> cria um outro dicionário independente
 
 #.get()
 contatos.get("robson@gmail.com") #--> se não houver valor, o retorno é none
@@ -44,6 +42,7 @@ contatos.update({"rsn@gmail.com": {"nome": "rsn", "idade":33}}) #se este valor n
 contatos.values() #--> retorna os valores de todas as chaves
 contatos.keys() #--> retorna as chaves 
 
+
 #in --> para verificar se uma chave está presente no dicionário
 "robson@gmail.com" in contatos #--> True
 "maria@gmail.com" in contatos #--> False
@@ -56,5 +55,6 @@ print("valores" in contatos["morais@outlook.com"]) #--> false
 #del contatos ["luna@python.dev"]["idade"]
 del contatos ["robson@gmail.com"]
 
-print(contatos)
 
+print(contatos)
+contatos.clear() #--> limpa todos os valores do dicionário
