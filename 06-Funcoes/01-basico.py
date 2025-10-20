@@ -1,6 +1,7 @@
 def show_message():
-    print("hello, world!")
-show_message()
+    mes = "hello, world!"
+    return mes
+print(show_message())
 
 
 def show_greetings(name):
