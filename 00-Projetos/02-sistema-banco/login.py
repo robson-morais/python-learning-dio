@@ -8,7 +8,7 @@ contas = []
 menu_login = """
 Bem-vindo(a)
 [a] Entrar
-[b] Criar Conta Corrente
+[b] Criar Conta Corrente 
 [c] Sair
 
 => 
