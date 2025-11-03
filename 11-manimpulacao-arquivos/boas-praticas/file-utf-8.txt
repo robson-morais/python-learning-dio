@@ -1,1 +1,1 @@
-ddsdjhsdj ÿ	
+ddsdjhsdj ÿ	(arquivo teste: o caractere que antecede esse parêntese não é entendido pelo utf-8, então a função que receberá este como parâmetro causará uma excessão)

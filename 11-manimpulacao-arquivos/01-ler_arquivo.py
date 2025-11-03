@@ -7,8 +7,6 @@ print(arquivo.readline()) #-> imprime uma linha do arquivo por vez
 for linha in arquivo.readline(): #percorre uma linha
     print(linha)
 
-
-
 print(arquivo.readlines()) #-> Retorna uma lista com todas as linhas do arquivo
 
 for linha in arquivo.readlines(): #-> percorre a lista com todas as linhas
@@ -21,5 +19,3 @@ while len(linha := arquivo.readline()):
     print(linha)
 
 arquivo.close()
-
-
