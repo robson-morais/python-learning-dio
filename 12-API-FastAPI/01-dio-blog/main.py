@@ -1,6 +1,7 @@
 from datetime import datetime, UTC
+from typing import Annotated
 
-from fastapi import FastAPI, status
+from fastapi import Response, Cookie, FastAPI, status, Header
 from pydantic import BaseModel
 
 app = FastAPI()
@@ -44,8 +45,13 @@ fake_db2 = [
     {'title': "Criando uma aplicacao com Starlett", 'date': datetime.now(UTC), 'published':True}
 ]
 
-@app.get('/posts/fakedb3') #Adicionando a condicao booleana no parametro; se ela é obrigatoria para esta funcao, entao ela antecede os outros parametros
-def read_posts5(published: bool, limit: int, skip: int = 0):
+@app.get('/posts/fakedb3') #Adicionando a condicao booleana no parametro + lidando com Cookies
+def read_posts5(response: Response, published: bool, limit: int, skip: int = 0, ads_id: Annotated[str | None, Cookie()] = None, user_agent: Annotated[str | None, Header()] = None):
+
+    response.set_cookie(key="user", value="rob.stark@dcx.com")
+    print(f"Cookie: {ads_id}")
+
+    print(f"Browser: {user_agent}")
     posts = []
     for post in fake_db2:
         if len(posts) == limit:
