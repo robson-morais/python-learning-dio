@@ -10,6 +10,11 @@ class Pessoa(ABC):
     def andar(self):
         pass
 
+    @property
+    @abstractmethod
+    def sexo(self):
+        pass
+
 class Crianca(Pessoa):
 
     def falar(self):
@@ -17,7 +22,7 @@ class Crianca(Pessoa):
 
     def andar(self):
         print("Andando...")
-
+    
 c = Crianca()
 c.falar()
 c.andar()

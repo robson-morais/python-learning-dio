@@ -1,7 +1,7 @@
 from datetime import datetime, UTC
 from typing import Annotated
 
-from fastapi import Response, Cookie, FastAPI, status, Header, APIRouter
+from fastapi import Response, Cookie, status, Header, APIRouter
 
 from schemas.post import PostIn
 from views.post import PostOut
