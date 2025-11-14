@@ -10,10 +10,6 @@ class Pessoa(ABC):
     def andar(self):
         pass
 
-    @property
-    @abstractmethod
-    def sexo(self):
-        pass
 
 class Crianca(Pessoa):
 

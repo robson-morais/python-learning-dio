@@ -1,0 +1,21 @@
+explique como deve ser feita a requisicao para adicionar um item no dicionario 'fake_db' no seguinte caso:
+
+fake_db = [
+    {'title': "Criando uma aplicacao com Django", 'author':'robson-morais', 'date': datetime.now(UTC), 'published':True}
+]
+
+class PostIn(BaseModel):
+    title: str
+    author: str
+    date: datetime = datetime.now(UTC)
+    published: bool = False
+
+class PostOut(BaseModel):
+    title: str
+    author: str
+    date: datetime
+
+@router.post('/', status_code=status.HTTP_201_CREATED, response_model=PostOut)
+def create_post(post: PostIn):
+    fake_db.append(post.model_dump())
+    return post
